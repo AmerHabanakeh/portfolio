@@ -23,7 +23,7 @@
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "baseHref": "/cvTemplate/",
+            "baseHref": "/portfolio_template/",
             "assets": [
               {
                 "glob": "**/*",
