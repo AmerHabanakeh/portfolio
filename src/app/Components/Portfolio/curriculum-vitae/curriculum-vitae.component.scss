@@ -1,0 +1,23 @@
+.custom-cv:hover::before {
+    content: 'Download CV';
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    font-size: 25px;
+}
+
+.custom-cv img {
+    -o-transition: 0.5;
+    -webkit-transition: 0.5;
+    -moz-transition: 0.5;
+    -ms-transition: 0.5;
+    transition: 0.5;
+    cursor: pointer;
+}
+
+.custom-cv img:hover {
+    opacity: 20%;
+}

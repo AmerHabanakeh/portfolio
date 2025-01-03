@@ -1,0 +1,32 @@
+<div id="print-section"
+  class="flex min-h-screen justify-center  dark:bg-[#000000]  bg-striped-background bg-no-repeat bg-cover  bg-[#f0f0f0] sm:p-4">
+  <div class="flex min-h-full w-full max-w-screen-xl grow flex-col items-start overflow-hidden border border-stone-900
+dark:bg-[#1a1a1a]  bg-[#ffffff] shadow-strong sm:rounded-3xl animate-page-in ">
+    <app-home (downloadPdf)="downloadPDF()"></app-home>
+    <app-about></app-about>
+    <div class="w-full">
+      <app-statistics></app-statistics>
+      <app-core-tech></app-core-tech>
+      <app-my-works></app-my-works>
+      <app-education-experience></app-education-experience>
+      <app-curriculum-vitae></app-curriculum-vitae>
+      <app-get-touch></app-get-touch>
+      <app-footer></app-footer>
+    </div>
+
+    <div class="flex flex-col gap-4 ">
+      <button *ngIf="isShowScrollToTop" (click)="scrollToTop()"
+        class="fixed bottom-10 right-10 p-3 rounded-full bg-green-700 text-white shadow-lg hover:bg-green-800 transition-all duration-300"
+        aria-label="Scroll to Top">
+        <lucide-angular [img]="ArrowUp" class="my-icon"></lucide-angular>
+      </button>
+
+      <a *ngIf="isShowScrollToTop"
+        href="https://wa.me/+963958345660?text=Hello%20I%20am%20interested%20in%20your%20services." target="_blank"
+        class="fixed bottom-28 right-10 p-3 rounded-full bg-green-700 text-white shadow-lg hover:bg-green-800 transition-all duration-300">
+        <img src="./assets/images/WhatsApp_icon.png.webp" alt="WhatsApp" class="w-7 h-7" />
+      </a>
+    </div>
+
+  </div>
+</div>

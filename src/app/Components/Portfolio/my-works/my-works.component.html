@@ -1,0 +1,30 @@
+<div class="mx-auto w-full px-4 pb-12 sm:px-6 lg:w-full lg:px-8">
+    <h2 class="mb-4 font-brand-primary text-2xl font-extrabold tracking-tight text-stone-200 sm:text-3xl"
+        style="text-shadow:10px 10px 10px rgba(0,0,0,.5), 20px 20px 20px rgba(0,0,0,.4), 30px 30px 30px rgba(0,0,0,.1)">
+        <span class="text-green-700">My</span> <span class="dark:text-white text-black opacity-50">
+            Works</span>
+    </h2>
+
+    <div class="flex gap-4 flex-wrap justify-center items-center">
+        <ng-container *ngFor="let project of projects">
+            <a [href]="project.url" target="_blank"
+                class="group relative overflow-hidden rounded-xl cursor-pointer shadow-xl aspect-video h-36 sm:h-48 md:h-56">
+                <img [src]="project.imageURL" alt="Project Image"
+                    class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-80 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-center justify-center">
+                    <div
+                        class="text-center flex flex-col items-center text-white transform  opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
+                        <span class="text-xl block font-bold tracking-wide mb-4 text-green-700">{{project.name }}</span>
+                        <div class="flex justify-center gap-2">
+                            <img *ngFor="let image of project.frameWorkIcon" [src]="image"
+                                class="max-w-10 flex justify-center"
+                                [ngStyle]="{'color': project.frameWorkIcon.includes('angular') ? '#e23237' : project.frameWorkIcon.includes('react') ? '#00d8ff' : ''}"
+                                alt="Angular or React">
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </ng-container>
+    </div>
+</div>

@@ -1,0 +1,107 @@
+<div class="mx-auto w-full px-4 py-16 sm:px-6 sm:py-24 lg:w-full lg:px-8">
+    <h2 class="mb-4 font-brand-primary text-2xl font-extrabold tracking-tight text-stone-200 sm:text-3xl"
+        style="text-shadow:10px 10px 10px rgba(0,0,0,.5), 20px 20px 20px rgba(0,0,0,.4), 30px 30px 30px rgba(0,0,0,.1)">
+        <span class="font-brand-primary text-green-700">Cor</span><span class="dark:text-white text-black opacity-50">e
+            tech stack</span>
+    </h2>
+    <div class="skills-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 ">
+        <!-- Frontend Skills -->
+        <div>
+            <p class="text-xl font-bold dark:text-gray-100 text-black mb-4">Hard Skills</p>
+            <ng-container *ngFor="let skill of skills">
+                <div class="grid grid-cols-12 gap-2 mb-2 items-center">
+                    <!-- Skill Name -->
+                    <span class="col-span-4 text-sm font-medium text-[#a4a4a4]">{{
+                        skill.name
+                        }}</span>
+                    <!-- Progress Bar -->
+                    <div class="col-span-8 flex items-center space-x-1">
+                        <ng-container *ngFor="let i of [].constructor(10); let idx = index">
+                            <span class="flex h-2 flex-grow rounded-md" [ngClass]="{
+                    'bg-green-700': idx < skill.progress,
+                    'bg-gray-700': idx >= skill.progress
+                }"></span>
+                        </ng-container>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+
+        <!-- Soft Skills Skills -->
+        <div class="">
+            <p class="text-xl font-bold dark:text-gray-100 text-black mb-4">Soft Skills</p>
+            <ng-container *ngFor="let sfotSkill of softSkills">
+                <div class="grid grid-cols-12 gap-2 mb-2 items-center">
+                    <!-- Skill Name -->
+                    <span class="col-span-4 text-sm font-medium text-[#a4a4a4]">{{
+                        sfotSkill.name
+                        }}</span>
+                    <!-- Progress Bar -->
+                    <div class="col-span-8 flex items-center space-x-1">
+                        <ng-container *ngFor="let i of [].constructor(10); let idx = index">
+                            <span class="flex h-2 flex-grow rounded-md" [ngClass]="{
+                    'bg-green-700': idx < sfotSkill.progress,
+                    'bg-gray-700': idx >= sfotSkill.progress
+                }"></span>
+                        </ng-container>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+
+        <div class="mt-10">
+            <h2 class="mb-4 font-brand-primary text-2xl font-extrabold tracking-tight text-stone-200 sm:text-3xl"
+                style="text-shadow:10px 10px 10px rgba(0,0,0,.5), 20px 20px 20px rgba(0,0,0,.4), 30px 30px 30px rgba(0,0,0,.1)">
+                <span class="font-brand-primary text-green-700">Lang</span><span
+                    class=" dark:text-white text-black opacity-50">uages</span>
+            </h2>
+        </div>
+    </div>
+
+
+    <div class="skills-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 ">
+        <!-- Mother Languages-->
+        <div class="">
+            <p class="text-xl font-bold dark:text-gray-100 text-black mb-4">Mother Languages</p>
+            <ng-container>
+                <div class="grid grid-cols-12 gap-2 mb-2 items-center">
+                    <!--  Name -->
+                    <span class="col-span-4 text-sm font-medium text-[#a4a4a4]">{{
+                        motherLanguages.name
+                        }}</span>
+                    <!-- Progress Bar -->
+                    <div class="col-span-8 flex items-center space-x-1">
+                        <ng-container *ngFor="let i of [].constructor(10); let idx = index">
+                            <span class="flex h-2 flex-grow rounded-md" [ngClass]="{
+                    'bg-green-700': idx < motherLanguages.progress,
+                    'bg-gray-700': idx >= motherLanguages.progress
+                }"></span>
+                        </ng-container>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+
+        <div>
+            <p class="text-xl font-bold dark:text-gray-100 text-black mb-4">Another Languages</p>
+            <ng-container>
+                <div class="grid grid-cols-12 gap-2 mb-2 items-center">
+                    <!--  Name -->
+                    <span class="col-span-4 text-sm font-medium text-[#a4a4a4]">{{
+                        anotherLanguages.name
+                        }}</span>
+                    <!-- Progress Bar -->
+                    <div class="col-span-8 flex items-center space-x-1">
+                        <ng-container *ngFor="let i of [].constructor(10); let idx = index">
+                            <span class="flex h-2 flex-grow rounded-md" [ngClass]="{
+                            'bg-green-700': idx < anotherLanguages.progress,
+                            'bg-gray-700': idx >= anotherLanguages.progress
+                        }"></span>
+                        </ng-container>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+
+</div>

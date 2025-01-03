@@ -1,0 +1,60 @@
+<div class="mx-auto w-full px-4 pb-12 sm:px-6 lg:w-full lg:px-8">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8">
+        <!-- Education Section -->
+        <div class="col-span-1">
+            <h2 class="mb-4 font-brand-primary text-2xl font-extrabold tracking-tight text-stone-200 sm:text-3xl"
+                style="text-shadow: 5px 5px 15px rgba(0, 0, 0, .7)">
+                <span class="font-brand-primary text-green-700">Edu</span><span
+                    class="dark:text-white text-black opacity-50">cation</span>
+            </h2>
+            <ul>
+                <!-- Loop through the educationList dynamically -->
+                <li *ngFor="let education of educationList"
+                    class="relative border-b border-l border-gray-700 py-4 pl-4 last:border-b-0">
+                    <div class="absolute -left-2 top-3 flex items-center space-x-2 md:-left-4">
+                        <span
+                            class="whitespace-nowrap rounded-full border border-green-700 bg-gray-950 px-2 py-1 text-xs font-bold text-white shadow-xl shadow-black/30">
+                            {{ education.yearRange }}
+                        </span>
+                        <span class="text-xs font-medium dark:text-gray-200 text-black">{{ education.institution
+                            }}</span>
+                    </div>
+                    <div class="prose prose-sm flex flex-col pt-10 prose-ul:list-none">
+                        <h6 class="font-bold text-green-700 text-xs">{{ education.degree }}</h6>
+                        <p class="dark:text-gray-300 text-black">{{ education.description }}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Experience Section -->
+        <div class="col-span-1">
+            <h2 class="mb-4 font-brand-primary text-2xl font-extrabold tracking-tight text-stone-200 sm:text-3xl"
+                style="text-shadow: 5px 5px 15px rgba(0, 0, 0, .7)">
+                <span class="font-brand-primary text-green-700">Exp</span><span
+                    class="dark:text-white text-black opacity-50">erience</span>
+            </h2>
+            <ul>
+                <!-- Loop through the experienceList dynamically -->
+                <li *ngFor="let experience of experienceList"
+                    class="relative border-b border-l border-gray-700 py-4 pl-4 last:border-b-0">
+                    <div class="absolute -left-2 top-3 flex items-center space-x-2 md:-left-4">
+                        <span
+                            class="whitespace-nowrap rounded-full border border-green-700 bg-gray-950 px-2 py-1 text-xs font-bold text-white shadow-xl shadow-black/30">
+                            {{ experience.yearRange }}
+                        </span>
+                        <span class="text-xs font-medium dark:text-gray-200 text-black">{{ experience.company }}</span>
+                    </div>
+                    <div class="prose prose-sm flex flex-col pt-10 prose-ul:list-none">
+                        <h6 class="font-bold text-green-700 text-xs">{{ experience.role }}</h6>
+                        <p class="dark:text-gray-300 text-black">{{ experience.description }}</p>
+                        <ul class="list-disc list-inside text-green-700">
+                            <li><strong class="dark:text-stone-200 text-black">Frontend:</strong> {{ experience.frontend
+                                }}</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="mx-auto w-full px-4  sm:px-6 sm:py-12 lg:w-full lg:px-8">
+    <h2 class="mb-4 font-brand-primary text-2xl font-extrabold tracking-tight text-stone-200 sm:text-3xl"
+        style="text-shadow:10px 10px 10px rgba(0,0,0,.5), 20px 20px 20px rgba(0,0,0,.4), 30px 30px 30px rgba(0,0,0,.1)">
+        <span class="font-brand-primary text-green-700">Sta</span><span
+            class=" dark:text-white text-black opacity-50">ts</span>
+    </h2>
+    <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 w-full">
+        <div *ngFor="let stat of stats"
+            class="group relative dark:bg-[#2c2c2c] bg-[#f0f0f0]  hover:bg-[#b0b0b0] dark:hover:bg-[#3c3c3c] transition-all  text-center space-y-2 rounded-xl border-none border-green-900 px-2 py-4 shadow-xl shadow-black/30 ">
+            <div class="text-green-700 text-2xl text-center ">
+                <lucide-angular [img]="stat.icon" class="my-icon flex justify-center items-center "></lucide-angular>
+            </div>
+            <div class="mt-4">
+                <div>
+                    <h6 class="text-sm dark:text-white text-black ">
+                        <a href="#">
+                            <span aria-hidden="true" class="absolute inset-0 "></span>
+                            {{stat.label}}
+                        </a>
+                    </h6>
+                </div>
+                <h3 class="font-brand-primary text-lg font-medium dark:text-gray-100 text-black sm:text-4xl">
+                    {{stat.value ?? 0 }}</h3>
+            </div>
+        </div>
+    </div>
+</div>

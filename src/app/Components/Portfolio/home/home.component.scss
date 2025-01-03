@@ -1,0 +1,28 @@
+.animate-typing {
+    -webkit-animation: typing 6s steps(20) infinite;
+    animation: typing 6s steps(20) infinite;
+}
+
+.animate-blinking {
+    -webkit-animation: blink 1s steps(2) infinite;
+    animation: blink 1s steps(2) infinite;
+}
+
+@keyframes typing {
+    0%, 100% {
+    width: 0;
+}
+    30%, 70% {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+        0% {
+        opacity: 0;
+    }
+}
+
+h2 {
+    margin-bottom: 0 !important;
+}
